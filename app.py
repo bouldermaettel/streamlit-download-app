@@ -8,7 +8,7 @@ import time
 
 # Configuration
 DATA_FOLDER = "./data"  # Local data folder for development
-ALLOWED_EXTENSIONS = ['.sql', '.csv']
+ALLOWED_EXTENSIONS = ['.sql', '.csv', '.gz']
 TOKEN_HASH = "5d41402abc4b2a76b9719d911017c592"  # "hello" hashed with MD5
 
 def verify_token(token):

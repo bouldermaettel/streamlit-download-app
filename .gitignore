@@ -54,3 +54,4 @@ Thumbs.db
 
 # Data folder (optional - uncomment if you don't want to track sample data)
 data/
+.history/
