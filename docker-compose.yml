@@ -11,6 +11,7 @@ services:
       - STREAMLIT_SERVER_PORT=8501
       - STREAMLIT_SERVER_ADDRESS=0.0.0.0
       - DATA_FOLDER=/data/downloads
+      - ALLOWED_EXTENSIONS=.sql,.csv,.gz,.json,.jsonl
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]

@@ -1,11 +1,11 @@
-#!/bin/bash
+git #!/bin/bash
 
 # Script to build and push the Streamlit Download App to Docker Hub
 
 # Configuration
 IMAGE_NAME="streamlit-download-app"
-DOCKER_HUB_USERNAME="your-username"  # Replace with your Docker Hub username
-TAG="latest"
+DOCKER_HUB_USERNAME="bouldermaettel"
+TAG="0.0.1"
 
 echo "Building Docker image..."
 docker build -t $IMAGE_NAME .
