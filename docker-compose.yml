@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   streamlit-download-app:
-    build: .
+    image: bouldermaettel/streamlit-download-app:0.0.1
     ports:
       - "8501:8501"
     volumes:

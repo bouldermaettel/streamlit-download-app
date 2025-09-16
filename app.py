@@ -7,8 +7,8 @@ import hashlib
 import time
 
 # Configuration
-DATA_FOLDER = os.getenv("DATA_FOLDER", "/data/downloads")  # Data folder path (configurable via environment variable)
-ALLOWED_EXTENSIONS = ['.sql', '.csv']
+DATA_FOLDER = os.getenv("DATA_FOLDER", "./data")  # Data folder path (configurable via environment variable, defaults to local for development)
+ALLOWED_EXTENSIONS = ['.sql', '.csv', '.gz']
 TOKEN_HASH = "5d41402abc4b2a76b9719d911017c592"  # "hello" hashed with MD5
 
 def verify_token(token):
