@@ -7,7 +7,7 @@ import hashlib
 import time
 
 # Configuration
-DATA_FOLDER = "./data"  # Local data folder for development
+DATA_FOLDER = os.getenv("DATA_FOLDER", "/data/downloads")  # Data folder path (configurable via environment variable)
 ALLOWED_EXTENSIONS = ['.sql', '.csv']
 TOKEN_HASH = "5d41402abc4b2a76b9719d911017c592"  # "hello" hashed with MD5
 
@@ -75,6 +75,8 @@ def main():
     if not os.path.exists(DATA_FOLDER):
         st.error(f"Data folder not found: {DATA_FOLDER}")
         st.write("Please ensure the folder is properly mounted.")
+        st.write(f"Current working directory: {os.getcwd()}")
+        st.write(f"Environment variable DATA_FOLDER: {os.getenv('DATA_FOLDER', 'Not set')}")
         return
     
     # Get available files
